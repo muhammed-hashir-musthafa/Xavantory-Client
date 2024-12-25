@@ -77,7 +77,7 @@ const AdminSignUpForm = () => {
               //   disabled={isLoading}
               className="w-full p-2 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-800 shadow-md transition duration-300"
             >
-              Get
+              Get Started
               {/* {isLoading ? "Signing up..." : "Get Started"} */}
             </button>
           </Form>
