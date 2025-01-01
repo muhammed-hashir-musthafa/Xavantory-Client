@@ -8,10 +8,10 @@ import {
   MdPeople,
   MdExitToApp,
   MdSchool,
-  MdGroup,
+  // MdGroup,
 } from "react-icons/md";
 
-const AdminSidebar = () => {
+const StaffSidebar = () => {
   return (
     <aside className="w-64 h-screen bg-gray-50 via-gray-100 to-gray-200 fixed top-0 shadow-lg flex flex-col z-10 overflow-y-auto">
       {/* Logo Section */}
@@ -20,22 +20,20 @@ const AdminSidebar = () => {
           <Image
             width={100}
             height={100}
-            src="/logo.png" // Replace with your logo path
+            src="/logo.png"
             alt="Logo"
             className="h-12 w-auto"
           />
           <div className="ml-3">
             <h3 className="font-semibold text-xl text-rose-600">Xavantory</h3>
-            <p className="text-sm text-gray-500">Admin Dashboard</p>
+            <p className="text-sm text-gray-500">Staff Dashboard</p>
           </div>
         </div>
-        {/* Notification Icon */}
       </div>
 
-      {/* Navigation Section */}
-      <nav className="flex-grow mt-5">
+       <nav className="flex-grow mt-5">
         {/* Dashboard */}
-        <Link href="/admin" passHref>
+        <Link href="/staff" passHref>
           <div className="flex items-center p-4 text-gray-700 hover:bg-rose-100 hover:text-rose-600 cursor-pointer transition duration-300 rounded-lg">
             <MdDashboard className="mr-3 text-xl" />
             Dashboard
@@ -59,7 +57,7 @@ const AdminSidebar = () => {
         </Link> */}
 
         {/* User Management */}
-        <Link href="/admin/students" passHref>
+        <Link href="/staff/students" passHref>
           <div className="flex items-center p-4 text-gray-700 hover:bg-rose-100 hover:text-rose-600 cursor-pointer transition duration-300 rounded-lg">
             <MdPeople className="mr-3 text-xl" />
             Students Management
@@ -67,22 +65,22 @@ const AdminSidebar = () => {
         </Link>
 
         {/* Staff Management */}
-        <Link href="/admin/staffs" passHref>
+        {/* <Link href="/staff/staffs" passHref>
           <div className="flex items-center p-4 text-gray-700 hover:bg-rose-100 hover:text-rose-600 cursor-pointer transition duration-300 rounded-lg">
             <MdGroup className="mr-3 text-xl" />
             Staff Management
           </div>
-        </Link>
+        </Link> */}
 
         {/* Attendance Management */}
-        <Link href="/admin/attendances" passHref>
+        <Link href="/staff/attendances" passHref>
           <div className="flex items-center p-4 text-gray-700 hover:bg-rose-100 hover:text-rose-600 cursor-pointer transition duration-300 rounded-lg">
             <MdSchool className="mr-3 text-xl" />
             Attendance Management
           </div>
         </Link>
         {/* Logout */}
-        <Link href="/admin/logout" passHref>
+        <Link href="/staff/logout" passHref>
           <div className="flex items-center p-4 text-gray-700 hover:bg-rose-100 hover:text-rose-600 cursor-pointer transition duration-300 rounded-lg">
             <MdExitToApp className="mr-3 text-xl" />
             Logout
@@ -98,4 +96,4 @@ const AdminSidebar = () => {
   );
 };
 
-export default AdminSidebar;
+export default StaffSidebar;

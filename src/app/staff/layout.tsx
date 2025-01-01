@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import BaseNavbar from "@/components/baseComponents/ui/Navbar/Navbar";
+import Navbar from "@/components/adminComponents/ui/Navbar/Navbar";
+import StaffSidebar from "@/components/staffComponents/ui/Sidebar/Sidebar";
 
 export const metadata: Metadata = {
   title: "Xavantory",
@@ -14,11 +15,15 @@ export default function staffLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <main>
-          <BaseNavbar />
-          {children}
-         </main>
+      <body className="h-screen w-screen bg-gray-100">
+        <div className="flex h-screen">
+          <Navbar role={"staff"} />
+          <StaffSidebar />
+
+          <div className="flex-grow p-6 ml-64 overflow-y-auto mt-16">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

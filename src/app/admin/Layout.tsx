@@ -10,7 +10,7 @@ export default function AdminLayout({
     <html lang="en" >
       <body className="h-screen w-screen bg-gray-100">
         <div className="flex h-screen">
-          <Navbar />
+          <Navbar role={'admin'} /> 
           <AdminSidebar />
 
           <div className="flex-grow p-6 ml-64 overflow-y-auto mt-16">{children}</div>

@@ -6,7 +6,7 @@ import InputField from "@/components/baseComponents/ui/InputField/InputField";
 // import toast from "react-hot-toast";
 // import { useRouter } from "next/navigation";
 
-const AdminSignUpForm = () => {
+const StaffSignUpForm = () => {
   //   const { doctorSignUp, isLoading, isError, isSuccess, error } =
   //     useDoctorSignup();
   //   const router = useRouter();
@@ -126,4 +126,4 @@ const AdminSignUpForm = () => {
   );
 };
 
-export default AdminSignUpForm;
+export default StaffSignUpForm;

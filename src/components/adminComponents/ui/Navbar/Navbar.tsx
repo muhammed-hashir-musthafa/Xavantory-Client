@@ -19,10 +19,11 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ShadCN/ui/dropdown-menu";
 
-export function Navbar() {
+export function Navbar({role}) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const role = "admin";
+  // const role = "admin";
+  console.log(role)
 
   return (
     <header className="bg-gray-100 dark:bg-gray-900 shadow-md fixed w-full mb-52">
